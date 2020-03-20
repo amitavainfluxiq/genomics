@@ -96,7 +96,7 @@ genarateForm(){
        
       window.scrollTo(500, 0);
 
-      // let  link = this.serverUrl +;
+      // let  link2 = this.serverUrl +;
       let data = {
         source: "CGXInformationList",
         token: this.tokenViaCookie,
