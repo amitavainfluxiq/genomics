@@ -1,34 +1,27 @@
 
 @font-face{
     font-family:"Helvetica-Regular";
-    src:url(../fonts/Helvetica-Normal.eot);
-    src:url(../fonts/Helvetica-Normal.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/Helvetica-Normal.woff2) format("woff2"),
-    url(../fonts/Helvetica-Normal.woff) format("woff"),
-    url(../fonts/Helvetica-Normal.ttf) format("truetype"),
-    url(../fonts/Helvetica-Normal.svg#Helvetica-Normal) format("svg");
+              
+    src:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Normal.eot);
+    src:url(https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Normal.eot?#iefix) format("embedded-opentype"),
+    url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Normal.woff2) format("woff2"),
+    url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Normal.woff) format("woff"),
+    url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Normal.ttf) format("truetype"),
+    url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Normal.svg#Helvetica-Normal) format("svg");
     font-weight:400;font-style:normal}
 
 
 @font-face{
      font-family:'HelveticaBold';
-     src:url(../fonts/Helvetica-Bold.eot);
-        src:url(../fonts/Helvetica-Bold.eot?#iefix) format("embedded-opentype"),
-        url(../fonts/Helvetica-Bold.woff2) format("woff2"),
-        url(../fonts/Helvetica-Bold.woff) format("woff"),
-        url(../fonts/Helvetica-Bold.ttf) format("truetype"),
-        url(../fonts/Helvetica-Bold.svg#Helvetica-Bold) format("svg");
+     src:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Bold.eot);
+        src:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Bold.eot?#iefix) format("embedded-opentype"),
+        url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Bold.woff2) format("woff2"),
+        url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Bold.woff) format("woff"),
+        url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Bold.ttf) format("truetype"),
+        url( https://all-frontend-assets.s3.amazonaws.com/Genomics/fonts/Helvetica-Bold.svg#Helvetica-Bold) format("svg");
         font-weight:700;font-style:normal}
 
-@font-face{
-    font-family:'Helvetica-Normal';
-    src:url(../fonts/Helvetica-Normal.eot);
-    src:url(../fonts/Helvetica-Normal.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/Helvetica-Normal.woff2) format("woff2"),
-    url(../fonts/Helvetica-Normal.woff) format("woff"),
-    url(../fonts/Helvetica-Normal.ttf) format("truetype"),
-    url(../fonts/Helvetica-Normal.svg#Helvetica-Normal) format("svg");
-    font-weight:400;font-style:normal}
+ 
  
  body{ margin: 0; padding: 0; background: #fff;}
  
@@ -36,7 +29,7 @@
 
  .mat-card{border-radius: 0px!important;}
 
- .landing_top{ border: none!important; box-shadow: none!important; margin: 0!important; padding: 0!important; background: url(../images/landing_banner.png) no-repeat left top!important; background-size: 1920px;}
+ .landing_top{ border: none!important; box-shadow: none!important; margin: 0!important; padding: 0!important; background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_banner.png) no-repeat left top!important; background-size: 1920px;}
 
 
  .landing_top_wrapper{ width: 1400px; margin: 0 auto; }
@@ -62,7 +55,7 @@
     .landing_top_text h4{ margin: 0; padding: 0; font-size: 22px; color: #ffffff;  line-height: 24px;  font-family:"Helvetica-Regular"; font-weight: normal; display: block; width: 445px; margin: 10px auto;} 
 
 
-    .landing_top_imgtext{ display: block; background: url(../images/gettestednow.png) no-repeat left top; width: 713px; height: 214px; position: absolute; bottom: 62px; left: -110px; }
+    .landing_top_imgtext{ display: block; background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/gettestednow.png) no-repeat left top; width: 713px; height: 214px; position: absolute; bottom: 62px; left: -110px; }
 
     .landing_top_imgtext_con{ font-size: 26px; color: #ffffff; display: block; font-family:"Helvetica-Regular"; width: 416px; margin: 78px 0 0 250px; text-align: left;}
 
@@ -70,7 +63,7 @@
 
     .landing_top_right_form{ width: 100%; background: #dee5ec; border: solid 1px #fff; display: block; }
 
-    .landing_top_right_form::after{ content: ''; background: url(../images/form_shadow.png) no-repeat left bottom;    
+    .landing_top_right_form::after{ content: ''; background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/form_shadow.png) no-repeat left bottom;    
          width: 150px;
         height: 300px;
         display: block;
@@ -120,7 +113,7 @@
      cursor: pointer; padding: 0px;
     }
 
-    .landing_top_right_form_body button .subbtn{ background:url(../images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 42px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 85px; text-shadow: 0 0 2px #044e94; height: 70px;}
+    .landing_top_right_form_body button .subbtn{ background:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 42px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 85px; text-shadow: 0 0 2px #044e94; height: 70px;}
 
     .landing_img1 {
         display: block;
@@ -140,12 +133,12 @@
         background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(225,241,247,1) 43%, rgba(255,255,255,1) 100%)!important;
         background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(225,241,247,1) 43%, rgba(255,255,255,1) 100%)!important;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )!important;}
-.landing_block2_wrapper{ width:720px; margin: 0 auto; background: url(../images/landing_img2.png) no-repeat right bottom; margin-bottom: 0px!important; padding-right: 680px; padding-bottom: 30px;}
+.landing_block2_wrapper{ width:720px; margin: 0 auto; background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_img2.png) no-repeat right bottom; margin-bottom: 0px!important; padding-right: 680px; padding-bottom: 30px;}
 
 .landing_block2_body h4{ display: block; width: 1350px; margin: 0 auto; background: #466a79; padding:20px 25px; font-size: 20px; color: #ffffff;  font-family:"Helvetica-Regular"; font-weight: normal;}
 
 
-.landing_block2_wrapper h2{ background: url(../images/block2_textshadow.png) no-repeat center bottom; width: 100%; padding-bottom: 6px; background-size: 98%;}
+.landing_block2_wrapper h2{ background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/block2_textshadow.png) no-repeat center bottom; width: 100%; padding-bottom: 6px; background-size: 98%;}
 
 .landing_block2_wrapper h2 span{ display: block; background: rgba(0,194,123,1);
     background: -moz-linear-gradient(left, rgba(0,194,123,1) 0%, rgba(2,144,191,1) 100%);
@@ -160,11 +153,11 @@
     .landing_block2_wrapper h3{ margin: 0; padding: 2px 0 0 20px; font-family:"Helvetica-Regular"; font-size: 18px; font-weight: normal; color: #2f3030; border-left: solid 3px #44ade6;}
 
 
-    .landing_block3_body{ border: none!important; box-shadow: none!important; margin: 0!important; padding: 0!important; background: url(../images/landing_img3.png) no-repeat left top!important; background-size: 1920px!important; padding-bottom: 40px!important;  }
+    .landing_block3_body{ border: none!important; box-shadow: none!important; margin: 0!important; padding: 0!important; background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_img3.png) no-repeat left top!important; background-size: 1920px!important; padding-bottom: 40px!important;  }
 
     .landing_block3_wrapper{ width: 1400px; margin: 0 auto; position: relative;}
 
-    .landing_block3_wrapper h2{ background: url(../images/block2_textshadow.png) no-repeat center bottom;  width: 560px; text-align: center; margin: 38px auto!important; margin-bottom: 0px!important; padding-bottom: 6px; background-size: 98%;}
+    .landing_block3_wrapper h2{ background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/block2_textshadow.png) no-repeat center bottom;  width: 560px; text-align: center; margin: 38px auto!important; margin-bottom: 0px!important; padding-bottom: 6px; background-size: 98%;}
 
 .landing_block3_wrapper h2 span{ display: block; background: rgba(0,194,123,1);
     background: -moz-linear-gradient(left, rgba(0,194,123,1) 0%, rgba(2,144,191,1) 100%);
@@ -202,11 +195,11 @@
 
         
     
-        .landing_block3_wrapper button .landing_block3_span{ background:url(../images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 27px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 70px; text-shadow: 0 0 2px #044e94; height: 60px;}
+        .landing_block3_wrapper button .landing_block3_span{ background:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 27px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 70px; text-shadow: 0 0 2px #044e94; height: 60px;}
        
         .landing_block3_wrapper button::before {
             content: '';
-            background: url(../images/btn_shadow.png) no-repeat center bottom;
+            background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_shadow.png) no-repeat center bottom;
             display: block;
             position: absolute;
             width: 90%;
@@ -218,13 +211,13 @@
 
 
 
-        .landing_block4_body{ min-height: 400px; border: none!important; box-shadow: none!important; margin: 0!important; padding:40px 0!important; background: url(../images/landing_img4.jpg) no-repeat right top!important; background-size: 1920px!important;   }
+        .landing_block4_body{ min-height: 400px; border: none!important; box-shadow: none!important; margin: 0!important; padding:40px 0!important; background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_img4.jpg) no-repeat right top!important; background-size: 1920px!important;   }
 
         .landing_block4_wrapper{ width: 1400px; margin: 0 auto; position: relative;}
 
 
 
-        .landing_block4_wrapper h2{ background: url(../images/block2_textshadow.png) no-repeat center bottom;  width: 460px; text-align: center; margin:0!important;  padding-bottom: 6px; background-size: 98%;}
+        .landing_block4_wrapper h2{ background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/block2_textshadow.png) no-repeat center bottom;  width: 460px; text-align: center; margin:0!important;  padding-bottom: 6px; background-size: 98%;}
 
         .landing_block4_wrapper h2 span{ display: block; background: rgba(0,194,123,1);
             background: -moz-linear-gradient(left, rgba(0,194,123,1) 0%, rgba(2,144,191,1) 100%);
@@ -272,11 +265,11 @@
     
             
         
-            .landing_block4_wrapper button .landing_block4_span{ background:url(../images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 27px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 70px; text-shadow: 0 0 2px #044e94; height: 60px;}
+            .landing_block4_wrapper button .landing_block4_span{ background:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 27px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 70px; text-shadow: 0 0 2px #044e94; height: 60px;}
            
             .landing_block4_wrapper button::before {
                 content: '';
-                background: url(../images/btn_shadow.png) no-repeat center bottom;
+                background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_shadow.png) no-repeat center bottom;
                 display: block;
                 position: absolute;
                 width: 90%;
@@ -285,18 +278,18 @@
                 background-size: 100%;
                 left: 5%;
             }
+ 
 
 
+            .landing_block5_body{   border: none!important; box-shadow: none!important; margin: 0!important; padding:0px 0 144px 0!important; background: #e2f3f9 url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_img5_bg.png) no-repeat center bottom!important; background-size: 1920px!important;   }
 
-            .landing_block5_body{   border: none!important; box-shadow: none!important; margin: 0!important; padding:0px 0 144px 0!important; background: url(../images/landing_img5_bg.png) no-repeat center bottom!important; background-size: 1920px!important;   }
 
-
-            .landing_block5_bodycon{ background: url(../images/landing_img5.png) no-repeat left top; min-height: 660px; padding-top: 40px;}
+            .landing_block5_bodycon{ background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_img5.png) no-repeat left top; min-height: 660px; padding-top: 40px;}
 
             .landing_block5_wrapper{ width: 915px; margin: 0 auto; position: relative; padding-left: 485px;}
 
 
-            .landing_block5_wrapper h2{ background: url(../images/block2_textshadow.png) no-repeat center bottom; width: 100%; padding-bottom: 6px; background-size: 98%;}
+            .landing_block5_wrapper h2{ background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/block2_textshadow.png) no-repeat center bottom; width: 100%; padding-bottom: 6px; background-size: 98%;}
 
 .landing_block5_wrapper h2 span{ display: block; background: rgba(0,194,123,1);
     background: -moz-linear-gradient(left, rgba(0,194,123,1) 0%, rgba(2,144,191,1) 100%);
@@ -336,11 +329,11 @@
 
         
     
-    .landing_block5_wrapper button .landing_block5_span{ background:url(../images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 27px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 70px; text-shadow: 0 0 2px #044e94; height: 60px;}
+    .landing_block5_wrapper button .landing_block5_span{ background:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 27px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 70px; text-shadow: 0 0 2px #044e94; height: 60px;}
        
     .landing_block5_wrapper button::before {
         content: '';
-        background: url(../images/btn_shadow.png) no-repeat center bottom;
+        background: url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_shadow.png) no-repeat center bottom;
         display: block;
         position: absolute;
         width: 90%;
@@ -351,9 +344,9 @@
     }
 
 
-    .footerblock{   width: auto; background: #fff; padding:30px 15px; position: relative; margin: 0px!important;} 
+    .footerblock{   width: auto; background: #e2f3f9; padding:30px 15px; position: relative; margin: 0px!important; display: block;} 
 
-    .footerlogog{ display: block; margin: 0 auto;}
+    .footerlogog{ display: block; margin: 0 auto; max-width: 260px;} 
 
     .footercopyright{ position: absolute; left: 54px; top: 60px; font-size: 14px; color: #747a7c;   font-family: "Helvetica-Regular";}
 
@@ -460,3 +453,17 @@
   }
 
 /*------loder end-------*/
+
+.mat-form-field-appearance-fill .mat-form-field-subscript-wrapper {
+  padding: 0!important;
+}
+
+.mat-form-field-subscript-wrapper {
+  font-size: 14px;
+  margin-top: 4px!important;}
+
+  .CGXInformation_con1   .mat-radio-inner-circle {background-color: #0fc30b!important;}
+
+  .CGXInformation_con1   .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #c1c1c1;
+}

@@ -3,7 +3,7 @@
 
   <mat-card-content class="landing_top_wrapper">
   <mat-card-content class="landing_top_left">
- <span class="landing_top_logo"> <img src="../../assets/images/logo.png" alt=""></span>
+ <span class="landing_top_logo"> <img src=" https://all-frontend-assets.s3.amazonaws.com/Genomics/images/logo.png" alt=""></span>
 
  <span class="landing_top_text">
  <h2>
@@ -27,7 +27,7 @@
 </span>
 
 
-<img src="../../assets/images/landing_img1.png" class="landing_img1">
+<img src=" https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_img1.png" class="landing_img1">
 </mat-card-content>
 
 <mat-card-content class="landing_top_right">
@@ -44,46 +44,59 @@
 
     <span class="landing_top_right_form_body">
 
-            <form>
+      <form [formGroup]="myform" (ngSubmit)="doSubmit()">
 
               <mat-form-field appearance="fill">
                 <mat-label>First Name</mat-label>
-                <input matInput>
+                <input matInput placeholder="First Name"  [formControl]="myform.controls['fname']" (blur)="inputUntouch(myform,'fname')">
+                <mat-error   *ngIf="!myform.controls['fname'].valid && myform.controls['fname'].touched" class="errortext">First Name field can not be blank</mat-error> 
               </mat-form-field>
 
               <mat-form-field appearance="fill">
                 <mat-label>Last Name</mat-label>
-                <input matInput>
+                <input matInput placeholder="Last Name"  [formControl]="myform.controls['lname']" (blur)="inputUntouch(myform,'lname')">
+                <mat-error   *ngIf="!myform.controls['lname'].valid && myform.controls['lname'].touched" class="errortext">Last Name field can not be blank</mat-error> 
               </mat-form-field>
 
               <mat-form-field appearance="fill">
                 <mat-label>Email Address</mat-label>
-                <input matInput>
+                <input matInput placeholder="Email Address"  [formControl]="myform.controls['email']" (blur)="inputUntouch(myform,'email')">
+                <mat-error   *ngIf="!myform.controls['email'].valid && myform.controls['email'].touched" class="errortext">Email Address field can not be blank</mat-error> 
               </mat-form-field>
 
               <mat-form-field appearance="fill">
                 <mat-label>Phone</mat-label>
-                <input matInput>
+                <input matInput placeholder="Phone"  [formControl]="myform.controls['phone']" (blur)="inputUntouch(myform,'phone')">
+                <mat-error   *ngIf="!myform.controls['phone'].valid && myform.controls['phone'].touched" class="errortext">Phone field can not be blank</mat-error> 
               </mat-form-field>
 
               <mat-form-field appearance="fill">
-                <mat-label>Address</mat-label>
-                <textarea matInput></textarea>
+                <mat-label>Address</mat-label> 
+
+                <textarea matInput placeholder="Address"  [formControl]="myform.controls['address']" (blur)="inputUntouch(myform,'address')"></textarea>
+
+                <mat-error   *ngIf="!myform.controls['address'].valid && myform.controls['address'].touched" class="errortext">Address field can not be blank</mat-error> 
               </mat-form-field>
 
               <mat-form-field appearance="fill">
                 <mat-label>State</mat-label>
-                <mat-select>
-                  <mat-option value="option">Option</mat-option>
+                <mat-select [formControl]="myform.controls['state']">
+                  <mat-option value="">Select a State</mat-option>
+                  <mat-option *ngFor="let ste of stateArray" value="{{ste.name}}">{{ste.name}}</mat-option>
                 </mat-select>
+                <mat-error   *ngIf="!myform.controls['state'].valid && myform.controls['state'].touched" class="errortext">State field can not be blank</mat-error> 
               </mat-form-field>
 
 
               <mat-form-field appearance="fill">
                 <mat-label>City</mat-label>
-                <mat-select>
-                  <mat-option value="option">Option</mat-option>
+                <mat-select [formControl]="myform.controls['city']">
+                  <mat-option value="">Select a City</mat-option>
+                  <mat-option *ngFor="let ste of cityArray" value="{{ste.city}}">{{ste.city}}</mat-option>
+
                 </mat-select>
+                <mat-error   *ngIf="!myform.controls['city'].valid && myform.controls['city'].touched" class="errortext">City field can not be blank</mat-error> 
+
               </mat-form-field>
 
        
@@ -92,7 +105,8 @@
 
               <mat-form-field appearance="fill">
                 <mat-label>Zip</mat-label>
-                <input matInput>
+                <input matInput placeholder="Zip"  [formControl]="myform.controls['zip']" (blur)="inputUntouch(myform,'zip')">
+                <mat-error   *ngIf="!myform.controls['zip'].valid && myform.controls['zip'].touched" class="errortext">Zip field can not be blank</mat-error>
               </mat-form-field>
 
               <button mat-button><span class="subbtn">SUBMIT</span></button>
@@ -232,3 +246,6 @@ patients make informed decisions every step of the way.
 
 
  <app-footer></app-footer>
+
+
+ 

@@ -1,0 +1,500 @@
+<span class="CGXInformation_top">
+  <span class="CGXInformation_top_wrapper">
+    <span class="CGXInformation_top_logo">
+  <img src=" https://all-frontend-assets.s3.amazonaws.com/Genomics/images/logo2.png" alt="">
+</span>
+</span>
+</span>
+
+
+<span class="CGXInformation_body">
+
+  <form [formGroup]="myforminner" (ngSubmit)="doSubmitinner()">
+  <span class="CGXInformation_body_wrapper">
+
+  
+
+    <h2>CGX INFORMATION</h2>
+
+    <span class="CGXInformation_con1">
+    <h3 class="CGXh31">Physician Information</h3>
+
+    <span class="CGXInformation_span">
+      <mat-label>Primary Care Physician: </mat-label>
+     <input placeholder="Primary Care Physician"  [formControl]="myforminner.controls['Physician']" (blur)="inputUntouch(myforminner,'Physician')">
+      <mat-error   *ngIf="!myforminner.controls['Physician'].valid && myforminner.controls['Physician'].touched" class="errortext">Primary Care Physician field can not be blank</mat-error> 
+    </span>
+
+   <span class="CGXInformation_span">
+      <mat-label>Telephone: </mat-label>
+     <input placeholder="Telephone"  [formControl]="myforminner.controls['telephone']" (blur)="inputUntouch(myforminner,'telephone')">
+      <mat-error   *ngIf="!myforminner.controls['telephone'].valid && myforminner.controls['telephone'].touched" class="errortext">Telephone field can not be blank</mat-error> 
+    </span>
+
+    <span class="CGXInformation_span">
+      <mat-label>Fax: </mat-label>
+     <input placeholder="Fax"  [formControl]="myforminner.controls['fax']" (blur)="inputUntouch(myforminner,'fax')">
+      <mat-error   *ngIf="!myforminner.controls['fax'].valid && myforminner.controls['fax'].touched" class="errortext">Fax field can not be blank</mat-error> 
+    </span>
+
+    <span class="CGXInformation_span">
+      <mat-label>Address: </mat-label>
+     <textarea placeholder="Address"  [formControl]="myforminner.controls['address']" (blur)="inputUntouch(myforminner,'address')"></textarea>
+      <mat-error   *ngIf="!myforminner.controls['address'].valid && myforminner.controls['address'].touched" class="errortext">Address field can not be blank</mat-error> 
+    </span>
+ 
+  
+
+    <span class="CGXInformation_span">
+      <mat-label>State: </mat-label>
+      <select [formControl]="myforminner.controls['state']">
+        <option value="">Select a State</option>
+        <option *ngFor="let ste of stateArray" value="{{ste.name}}">{{ste.name}}</option>
+      </select>
+      <mat-error   *ngIf="!myforminner.controls['state'].valid && myforminner.controls['state'].touched" class="errortext">State field can not be blank</mat-error>
+    </span>
+
+
+    
+    <span class="CGXInformation_span">
+      <mat-label>City: </mat-label>
+      <select [formControl]="myforminner.controls['city']">
+        <option value="">Select a City</option>
+        <option *ngFor="let ste of cityArray" value="{{ste.city}}">{{ste.city}}</option>
+      </select>
+      <mat-error   *ngIf="!myforminner.controls['city'].valid && myforminner.controls['city'].touched" class="errortext">City field can not be blank</mat-error>
+    </span>
+ 
+      
+    
+    <span class="CGXInformation_span">
+      <mat-label>ZIP: </mat-label>
+     <input placeholder="ZIP"  [formControl]="myforminner.controls['zip']" (blur)="inputUntouch(myforminner,'zip')">
+      <mat-error   *ngIf="!myforminner.controls['zip'].valid && myforminner.controls['zip'].touched" class="errortext">ZIP field can not be blank</mat-error> 
+    </span>
+
+     
+
+  
+
+
+
+  </span>
+
+  <span class="CGXInformation_con1">
+    <h3 class="CGXh32">Client Profile Questionnaire</h3>
+
+
+    <span class="matradio-group">
+      <label>Do you use Diabetic Supplies (meters, strips, lancets, needles, etc.):  </label>
+    <mat-radio-group aria-label="Select an option"  formControlName="diabetic"  >
+      <mat-radio-button value="Yes">Yes</mat-radio-button>
+      <mat-radio-button value="No">No</mat-radio-button>
+    </mat-radio-group>
+    <mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+
+  </span>
+
+  <span class="matradio-group">
+    <label>Do you use Wound Care Supplies:  </label>
+   
+  <mat-radio-group aria-label="Select an option" formControlName="supplies">
+    <mat-radio-button value="Yes">Yes</mat-radio-button>
+    <mat-radio-button value="No">No</mat-radio-button>
+  </mat-radio-group>
+  <mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+<span class="matradio-group">
+  <label>Do you have or have you ever used a brace for pain relief: </label>
+
+<mat-radio-group aria-label="Select an option" formControlName="relief">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+
+</span>
+
+<span class="matradio-group">
+  <label>Do you use Topical Creams:  </label>
+ 
+<mat-radio-group aria-label="Select an option" formControlName="creams">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+
+<span class="matradio-group">
+  <label>Have you ever tried Braces: </label>
+
+<mat-radio-group aria-label="Select an option" formControlName="braces">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+
+<span class="matradio-group">
+  <label>Do you use a Walker:  </label>
+ 
+<mat-radio-group aria-label="Select an option" formControlName="walker">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+
+<span class="matradio-group">
+  <label>Do you use a Scooter:   </label>
+ 
+<mat-radio-group aria-label="Select an option" formControlName="scooter">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+
+<span class="matradio-group">
+  <label>Do you have Allergies:  </label>
+ 
+<mat-radio-group aria-label="Select an option" formControlName="allergies">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+
+<span class="matradio-group">
+  <label>Do you use Catheters:  </label>
+  
+<mat-radio-group aria-label="Select an option" formControlName="catheters">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+
+
+<span class="matradio-group">
+  <label>Have you ever had Cancer:  </label>
+ 
+<mat-radio-group aria-label="Select an option" formControlName="cancer">
+  <mat-radio-button value="Yes">Yes</mat-radio-button>
+  <mat-radio-button value="No">No</mat-radio-button>
+</mat-radio-group>
+<mat-error   *ngIf="!myforminner.controls['diabetic'].valid && myforminner.controls['diabetic'].touched" class="errortext">Please Select One</mat-error> 
+</span>
+
+
+
+
+
+  </span>
+
+
+  <span class="CGXInformation_con1">
+    <h3>Cancer Questionnaire</h3>
+    <span class="CGXInformation_con1_block">
+    <span class="CGXInformation_con_left">
+      <span class="CGXInformation_con_left_top">
+
+    <span class="con_left_text">Questionnaire</span>
+    <span class="con_left_text">Name</span>
+    <span class="con_left_text">Type   </span>
+    <span class="con_left_text">Relation Type </span>
+    <span class="con_left_text">Degree <br/>
+      Diagnose   </span>
+      <span class="con_left_text">Age <br/>
+        Diagnosed   </span>
+        <span class="con_left_text">If Deceased <br/>
+          Age At Death   </span>
+
+    </span>
+
+    <span class="CGXInformation_con_left_body">
+
+      <label>Personal History :</label>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Name  </mat-label>
+        <input matInput >
+        
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Type   </mat-label>
+        <input matInput >
+        
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Relation Type   </mat-label>
+        <input matInput >
+        
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Degree   Diagnose  </mat-label>
+        <input matInput >
+        
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Age Diagnosed  </mat-label>
+        <input matInput >
+        
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label> If Deceased  Age At Death  </mat-label>
+        <input matInput >
+        
+      </mat-form-field>
+      
+
+</span>
+
+<span class="CGXInformation_con_left_body">
+
+  <label>Family History :</label>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Name  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Relation Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Degree   Diagnose  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Age Diagnosed  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label> If Deceased  Age At Death  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+  
+
+</span>
+
+
+<span class="CGXInformation_con_left_body">
+
+  <label>Mother :</label>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Name  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Relation Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Degree   Diagnose  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Age Diagnosed  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label> If Deceased  Age At Death  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+  
+
+</span>
+
+
+<span class="CGXInformation_con_left_body">
+
+  <label>Father :</label>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Name  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Relation Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Degree   Diagnose  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Age Diagnosed  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label> If Deceased  Age At Death  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+  
+
+</span>
+
+<span class="CGXInformation_con_left_body">
+
+  <label>Daughter :</label>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Name  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Relation Type   </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Degree   Diagnose  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Age Diagnosed  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" >
+    <mat-label> If Deceased  Age At Death  </mat-label>
+    <input matInput >
+    
+  </mat-form-field>
+  
+
+</span>
+
+
+
+      </span>
+
+
+      <span class="CGXInformation_con_right">
+
+        <h3>Type of Cancer</h3>
+
+        <strong>*Breast</strong>
+        <strong>*Ovarian</strong>
+          <strong>*Digestive</strong>
+
+          <p>-Pancreatic</p>
+          <p>-Colon</p> 
+          <p>-Rectal</p>
+            <p>-Gallbadder</p>
+            <p>-Intestinal</p>
+            <p>-Stomach</p>
+            <p>-Esophageal</p>
+            <p>-Throat</p>
+            <p>-Liver</p>
+
+            <strong>*Lung</strong>
+            <p>-Other Respiratory</p>
+
+            <strong>*Genital</strong>
+            <p>-Cervical</p>
+            <p> -Uterine</p>
+            <p>-Endometrial</p>
+            <p>-Other Genital Organs</p>
+
+            <strong>*Prostate</strong>
+            <strong>*Testicular</strong>
+              <strong>*Kidney</strong>
+                <strong>*Bladder</strong>
+
+           <p>-Urinary Tract</p>
+                  <strong>*Leukemia</strong>
+                    <strong>*Lymphatic</strong>
+                      <strong>*Other Organ Systems</strong>
+
+        </span>
+
+      </span>
+  </span>
+
+
+
+ 
+
+  </span>
+
+  <button mat-button class="CGXInformationbtn"><span class="subbtn">SUBMIT</span></button>
+
+</form>
+
+ 
+</span>
+
+
+<app-footer></app-footer>

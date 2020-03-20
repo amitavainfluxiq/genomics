@@ -1,0 +1,82 @@
+
+
+.CGXInformation_top{ display: block; background: rgba(42,199,134,1);
+    background: -moz-linear-gradient(left, rgba(42,199,134,1) 0%, rgba(42,164,245,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(42,199,134,1)), color-stop(100%, rgba(42,164,245,1)));
+    background: -webkit-linear-gradient(left, rgba(42,199,134,1) 0%, rgba(42,164,245,1) 100%);
+    background: -o-linear-gradient(left, rgba(42,199,134,1) 0%, rgba(42,164,245,1) 100%);
+    background: -ms-linear-gradient(left, rgba(42,199,134,1) 0%, rgba(42,164,245,1) 100%);
+    background: linear-gradient(to right, rgba(42,199,134,1) 0%, rgba(42,164,245,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ac786', endColorstr='#2aa4f5', GradientType=1 );}
+
+    .CGXInformation_top_wrapper{ width: 1400px; margin: 0 auto; display: block;}
+    .CGXInformation_top_logo{ background: #fff; width: 386px; padding: 20px; display: block;}
+
+    .CGXInformation_top_logo img{ width: 100%;}
+
+ 
+        .CGXInformation_body{background:#e7f4f9 url(https://all-frontend-assets.s3.amazonaws.com/Genomics/images/landing_img5_bg.png) no-repeat center bottom!important;
+            background-size: 1920px!important; display: block; overflow: hidden;   padding: 40px 0 60px 0;;}
+
+            .CGXInformation_body_wrapper{ width: 1400px; margin: 0 auto; display: block;  background: #ffffff; }
+    
+        .CGXInformation_body h2{ background: #466a79; padding: 25px 25px 18px 25px; font-size: 48px;  color: #fff;   font-family:'HelveticaBold'; margin: 0;  }
+
+        .CGXInformation_con1{ display: block; padding: 25px; padding-bottom: 0px;}
+
+        .CGXInformation_con1:last-of-type{ padding-bottom: 25px;}
+
+        .CGXInformation_body h3{ font-size: 30px; color: #2ac68a; text-transform: uppercase; margin: 0; padding: 0 0 20px 0;  font-family:"Helvetica-Regular"; font-weight: normal;}
+
+
+        .matradio-group{ display: block; border: solid 1px #cacaca; padding: 15px;border-bottom: none;}
+
+        .matradio-group:last-child{border-bottom: solid 1px #cacaca;}
+
+        .CGXInformation_con1_block{ display: flex; border: solid 1px #e9edef; padding: 2px;}
+
+        .CGXInformation_con_right{ width: 200px; background: #e9edef;}
+
+        .CGXInformation_con_left_top{ display: block;}
+
+        .CGXInformation_con_left_body{ display: block;}
+
+
+ 
+      
+        .CGXInformation_body .CGXInformationbtn{ width: 250px; height: 74px; text-align: center; line-height: 70px; background: rgba(29,186,238,1);
+            background: -moz-linear-gradient(top, rgba(29,186,238,1) 0%, rgba(4,119,191,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(29,186,238,1)), color-stop(100%, rgba(4,119,191,1)));
+            background: -webkit-linear-gradient(top, rgba(29,186,238,1) 0%, rgba(4,119,191,1) 100%);
+            background: -o-linear-gradient(top, rgba(29,186,238,1) 0%, rgba(4,119,191,1) 100%);
+            background: -ms-linear-gradient(top, rgba(29,186,238,1) 0%, rgba(4,119,191,1) 100%);
+            background: linear-gradient(to bottom, rgba(29,186,238,1) 0%, rgba(4,119,191,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dbaee', endColorstr='#0477bf', GradientType=0 ); border:  solid 1px #fff; box-shadow: none;
+         cursor: pointer; padding: 0px; display: block; margin: 20px auto; border-radius: 10px;
+        }
+    
+        .CGXInformation_body .CGXInformationbtn .subbtn{ background:url( https://all-frontend-assets.s3.amazonaws.com/Genomics/images/btn_img.png) no-repeat  center 5px; background-size: 100%; display: block; margin: 0 10px; font-size: 42px; color: #ffffff; text-transform: uppercase; font-family:'HelveticaBold';     line-height: 85px; text-shadow: 0 0 2px #044e94; height: 70px;}
+    
+
+        .CGXh31{ padding-bottom: 0px!important;}
+
+        .CGXInformation_span{ display: block;}
+
+        .CGXInformation_span mat-label{ display: block; font-size: 18px; color: #1c262a; font-family:"Helvetica-Regular"; padding-top: 10px; padding-bottom: 5px;}
+
+        .CGXInformation_span  input{ outline: none; display: block; background: #e5edf0; border: solid 1px #d3d9d9; padding: 5px 1%; width: 98%; height: 28px;  font-family:"Helvetica-Regular"; font-size: 18px;}
+
+        .CGXInformation_span  select{ outline: none; display: block; background: #e5edf0; border: solid 1px #d3d9d9; padding: 5px 1%; width: 100%; height: 36px;  font-family:"Helvetica-Regular"; font-size: 18px;}
+
+        .CGXInformation_span  textarea{ outline: none; display: block; background: #e5edf0; border: solid 1px #d3d9d9; padding: 5px 1%; width: 98%; height:50px;  resize: none; font-family:"Helvetica-Regular"; font-size: 18px;}
+
+        .mat-error{ font-size: 75%;}
+
+        .CGXh32{     padding-bottom: 10px!important;
+            padding-top: 5px!important}
+
+           .CGXInformation_con1  .mat-radio-group{ float: right;}
+
+           .CGXInformation_con1  .mat-radio-group .mat-radio-button{ margin: 0 5px;}
+
+      
