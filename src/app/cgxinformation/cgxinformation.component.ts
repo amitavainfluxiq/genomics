@@ -107,7 +107,13 @@ genarateForm(){
         if (res.status == 'success') {
           this.genarateForm();
           
-          setTimeout(() => {
+          // setTimeout(() => {
+            this.myforminner.reset();
+           
+            window.scrollTo(500, 0);
+          // }, 500);
+
+            setTimeout(() => {
             this.myforminner.reset();
            
             window.scrollTo(500, 0);
