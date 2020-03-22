@@ -59,6 +59,116 @@ genarateForm(){
     allergies: ['', Validators.required],
     catheters: ['', Validators.required],
     cancer: ['', Validators.required],
+
+    personalhistoryname: [''],
+    personalhistorytype: [''],
+    personalhistoryrelationrype: [''],
+    personalhistorydegreediagnose: [''],
+    personalhistorydgediagnosed: [''],
+    personalhistoryagedtdeath: [''],
+
+    familyhistoryname: [''],
+    familyhistorytype: [''],
+    familyhistoryrelationtype: [''],
+    familyhistorydegreediagnose: [''],
+    familyhistoryagediagnosed: [''],
+    familyhistoryageatdeath: [''],
+
+    mothername: [''],
+    mothertype: [''],
+    motherrelationtype: [''],
+    motherdegreediagnose: [''],
+    motheragediagnosed: [''],
+    motherageatdeath: [''],
+
+    fathername: [''],
+    fathertype: [''],
+    fatherrelationtype: [''],
+    fatherdegreediagnose: [''],
+    fatheragediagnosed: [''],
+    fatherageatdeath: [''],
+    
+    daughtername: [''],
+    daughtertype: [''],
+    daughterrelationtype: [''],
+    daughterdegreediagnose: [''],
+    daughteragediagnosed: [''],
+    daughterageatdeath: [''],
+
+    sonname: [''],
+    sontype: [''],
+    sonrelationtype: [''],
+    sondegreediagnose: [''],
+    sonagediagnosed: [''],
+    sonageatdeath: [''],
+
+
+    brothername: [''],
+    brothertype: [''],
+    brotherrelationtype: [''],
+    brotherdegreediagnose: [''],
+    brotheragediagnosed: [''],
+    brotherageatdeath: [''],
+
+
+    sistername: [''],
+    sistertype: [''],
+    sisterrelationtype: [''],
+    sisterdegreediagnose: [''],
+    sisteragediagnosed: [''],
+    sisterageatdeath: [''],
+
+
+    nephewname: [''],
+    nephewtype: [''],
+    nephewrelationtype: [''],
+    nephewdegreediagnose: [''],
+    nephewagediagnosed: [''],
+    nephewageatdeath: [''],
+
+
+    niecename: [''],
+    niecetype: [''],
+    niecerelationtype: [''],
+    niecedegreediagnose: [''],
+    nieceagediagnosed: [''],
+    niecengeatdeath: [''],
+
+    unclename: [''],
+    uncletype: [''],
+    unclerelationtype: [''],
+    uncledgreediagnose: [''],
+    uncleugediagnosed: [''],
+    uncleageatdeath: [''],
+
+    autnname: [''],
+    autntype: [''],
+    autnrelationtype: [''],
+    autndegreediagnose: [''],
+    autnagediagnosed: [''],
+    autnageatdeath: [''],
+
+    momsfatherName: [''],
+    momsfathertype: [''],
+    momsfatherrelationtype: [''],
+    momsfatherdegreediagnose: [''],
+    momsfatheragediagnosed: [''],
+   momsmatherageatdeath: [''],
+ 
+   momsmothername: [''],
+   momsmothertype: [''],
+   momsmotherrelationtype: [''],
+   momsmotherdegreediagnose: [''],
+   momsmotheragediagnosed: [''],
+   momsmotherageatdeath: [''],
+
+   othername: [''],
+   othertype: [''],
+   otherrelationtype: [''],
+   otherdegreediagnose: [''],
+   otheragediagnosed: [''],
+   otherageatdeath: [''],
+ 
  
   });
 }

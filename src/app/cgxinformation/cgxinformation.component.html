@@ -47,7 +47,7 @@
 
     <span class="CGXInformation_span">
       <mat-label>State: </mat-label>
-      <select [formControl]="myforminner.controls['state']">
+      <select [formControl]="myforminner.controls['state']" (blur)="inputUntouch(myforminner,'state')">
         <option value="">Select a State</option>
         <option *ngFor="let ste of stateArray" value="{{ste.name}}">{{ste.name}}</option>
       </select>
@@ -58,7 +58,7 @@
     
     <span class="CGXInformation_span">
       <mat-label>City: </mat-label>
-      <select [formControl]="myforminner.controls['city']">
+      <select [formControl]="myforminner.controls['city']" (blur)="inputUntouch(myforminner,'city')">
         <option value="">Select a City</option>
         <option *ngFor="let ste of cityArray" value="{{ste.city}}">{{ste.city}}</option>
       </select>
@@ -201,7 +201,7 @@
 
 
   <span class="CGXInformation_con1">
-    <h3>Cancer Questionnaire</h3>
+    <h3  class="CGXh32">Cancer Questionnaire</h3>
     <span class="CGXInformation_con1_block">
     <span class="CGXInformation_con_left">
       <span class="CGXInformation_con_left_top">
@@ -211,239 +211,689 @@
     <span class="con_left_text">Type   </span>
     <span class="con_left_text">Relation Type </span>
     <span class="con_left_text">Degree <br/>
-      Diagnose   </span>
+      <p>Diagnose</p>   </span>
       <span class="con_left_text">Age <br/>
-        Diagnosed   </span>
+        <p> Diagnosed</p>   </span>
         <span class="con_left_text">If Deceased <br/>
-          Age At Death   </span>
+          <p> Age At Death </p>  </span>
 
     </span>
 
     <span class="CGXInformation_con_left_body">
-
+      <span class="con_left_text2">
       <label>Personal History :</label>
+      </span>
 
-      <mat-form-field appearance="fill" >
-        <mat-label>Name  </mat-label>
-        <input matInput >
+      <span class="con_left_text2">
+     
+        <input placeholder="Name"  [formControl]="myforminner.controls['personalhistoryname']" >
         
-      </mat-form-field>
+      </span>
 
-      <mat-form-field appearance="fill" >
-        <mat-label>Type   </mat-label>
-        <input matInput >
+      <span class="con_left_text2">
+       
+        <input placeholder="Type"  [formControl]="myforminner.controls['personalhistorytype']">
         
-      </mat-form-field>
+      </span>
 
-      <mat-form-field appearance="fill" >
-        <mat-label>Relation Type   </mat-label>
-        <input matInput >
+      <span class="con_left_text2">
         
-      </mat-form-field>
+        <input placeholder="Relation Type"   [formControl]="myforminner.controls['personalhistoryrelationrype']">
+        
+      </span>
 
-      <mat-form-field appearance="fill" >
-        <mat-label>Degree   Diagnose  </mat-label>
-        <input matInput >
+      <span class="con_left_text2">
+     
+        <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['personalhistorydegreediagnose']">
         
-      </mat-form-field>
+      </span>
 
-      <mat-form-field appearance="fill" >
-        <mat-label>Age Diagnosed  </mat-label>
-        <input matInput >
+      <span class="con_left_text2">
+       
+        <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['personalhistorydgediagnosed']">
         
-      </mat-form-field>
+      </span>
 
-      <mat-form-field appearance="fill" >
-        <mat-label> If Deceased  Age At Death  </mat-label>
-        <input matInput >
+      <span class="con_left_text2">
         
-      </mat-form-field>
+        <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['personalhistoryagedtdeath']">
+        
+      </span>
       
 
 </span>
 
 <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Family History:</label>
+  </span>
 
-  <label>Family History :</label>
-
-  <mat-form-field appearance="fill" >
-    <mat-label>Name  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['familyhistoryname']" >
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['familyhistorytype']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Relation Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input placeholder="Relation Type"   [formControl]="myforminner.controls['familyhistoryrelationtype']">
+    
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Degree   Diagnose  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['familyhistorydegreediagnose']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Age Diagnosed  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['familyhistoryagediagnosed']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label> If Deceased  Age At Death  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['familyhistoryageatdeath']">
+    
+  </span>
   
 
 </span>
 
 
 <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Mother:</label>
+  </span>
 
-  <label>Mother :</label>
-
-  <mat-form-field appearance="fill" >
-    <mat-label>Name  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['mothername']" >
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['mothertype']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Relation Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input placeholder="Relation Type"   [formControl]="myforminner.controls['motherrelationtype']">
+    
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Degree   Diagnose  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['motherdegreediagnose']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Age Diagnosed  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['motheragediagnosed']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label> If Deceased  Age At Death  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['motherageatdeath']">
+    
+  </span>
   
 
 </span>
 
-
 <span class="CGXInformation_con_left_body">
-
+  <span class="con_left_text2">
   <label>Father :</label>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Name  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['fathername']" >
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['fathertype']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Relation Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input placeholder="Relation Type"   [formControl]="myforminner.controls['fatherrelationtype']">
+    
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Degree   Diagnose  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['fatherdegreediagnose']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Age Diagnosed  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['fatheragediagnosed']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label> If Deceased  Age At Death  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['fatherageatdeath']">
+    
+  </span>
+  
+
+</span> 
+
+<span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Daughter :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['daughtername']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['daughtertype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type"   [formControl]="myforminner.controls['daughterrelationtype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['daughterdegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['daughteragediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['daughterageatdeath']">
+    
+  </span>
+  
+
+</span>
+
+
+ <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Son :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['sonname']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['sontype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['sonrelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['sondegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['sonagediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['sonageatdeath']">
+    
+  </span>
+  
+
+</span>
+
+ <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Brother :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['brothername']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['brothertype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['brotherrelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['brotherdegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['brotheragediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['brotherageatdeath']">
+    
+  </span>
+  
+
+</span> 
+
+ <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Sister :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['sistername']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['sistertype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['sisterrelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['sisterdegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['sisteragediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['sisterageatdeath']">
+    
+  </span>
+  
+
+</span> 
+
+ <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Nephew  :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['nephewname']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['nephewtype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['nephewrelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['nephewdegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['nephewagediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['nephewageatdeath']">
+    
+  </span>
+  
+
+</span> 
+   
+
+ <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Niece  :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['niecename']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['niecetype']">
+    
+  </span>
+
+ 
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Relation Type"  [formControl]="myforminner.controls['niecerelationtype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['niecedegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['nieceagediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['niecengeatdeath']">
+    
+  </span>
+  
+
+</span> 
+ 
+
+<span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Uncle :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['unclename']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['uncletype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['unclerelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['uncledgreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['uncleugediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['uncleageatdeath']">
+    
+  </span>
+  
+
+</span>
+ 
+
+ <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Autn :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['autnname']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['autntype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['autnrelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['autndegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['autnagediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['autnageatdeath']">
+    
+  </span>
   
 
 </span>
 
 <span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Mom’s Father :</label>
+  </span>
 
-  <label>Daughter :</label>
-
-  <mat-form-field appearance="fill" >
-    <mat-label>Name  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['momsfatherName']" >
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['momsfathertype']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Relation Type   </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['momsfatherrelationtype']"  >
+    
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Degree   Diagnose  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['momsfatherdegreediagnose']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label>Age Diagnosed  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['momsfatheragediagnosed']">
     
-  </mat-form-field>
+  </span>
 
-  <mat-form-field appearance="fill" >
-    <mat-label> If Deceased  Age At Death  </mat-label>
-    <input matInput >
+  <span class="con_left_text2">
     
-  </mat-form-field>
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['momsmatherageatdeath']">
+    
+  </span>
+  
+
+</span>
+
+<span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>Mom’s Mother :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['momsmothername']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['momsmothertype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['momsmotherrelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['momsmotherdegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['momsmotheragediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['momsmotherageatdeath']">
+    
+  </span>
   
 
 </span>
 
 
+<span class="CGXInformation_con_left_body">
+  <span class="con_left_text2">
+  <label>other :</label>
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Name"  [formControl]="myforminner.controls['othername']" >
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Type"  [formControl]="myforminner.controls['othertype']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input placeholder="Relation Type" [formControl]="myforminner.controls['otherrelationtype']"  >
+    
+  </span>
+
+  <span class="con_left_text2">
+ 
+    <input placeholder="Degree Diagnose"  [formControl]="myforminner.controls['otherdegreediagnose']">
+    
+  </span>
+
+  <span class="con_left_text2">
+   
+    <input placeholder="Age Diagnosed"  [formControl]="myforminner.controls['otheragediagnosed']">
+    
+  </span>
+
+  <span class="con_left_text2">
+    
+    <input  placeholder="If Deceased  Age At Death"  [formControl]="myforminner.controls['otherageatdeath']">
+    
+  </span>
+  
+
+</span>
+ 
 
       </span>
 
 
       <span class="CGXInformation_con_right">
 
-        <h3>Type of Cancer</h3>
+        <h5>Type of Cancer</h5>
 
         <strong>*Breast</strong>
         <strong>*Ovarian</strong>
